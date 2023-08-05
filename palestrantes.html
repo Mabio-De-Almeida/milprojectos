@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MilProjectos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&family=Poppins:wght@400;700;800&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <style>
+        body{
+            position:relative;
+        }
+        .header-palestra{
+            padding-bottom: 200px;
+            position: relative;
+            padding-bottom: 300px;
+        }
+       
+        .hero{
+            display: flex;
+            justify-content: center;
+        }
+        .hero-text, .palestra-texto{
+            width: 100%;
+            text-align: center !important;
+        }
+        .palestrantes-mentores{
+            position:absolute;
+            top:25%;
+        }
+
+        .white{
+            height: 100vh;
+        }
+        @media (max-width: 768px){
+        
+        .hero{
+        padding-bottom: 50px;
+        }
+
+        .palestrantes-mentores{
+            position:relative;
+        }
+
+        .header-palestra{
+            
+            padding-bottom: 30px;
+        }
+        .white{
+            display: none;
+        }
+
+        .regulamentos{
+            padding: 0px;
+        }
+
+        .container-rules{
+        max-width: 768px;
+        display: flex;
+        justify-content: center;
+            }
+
+        .container-rules li{
+            background: #F5F5F5 ;
+            padding: 20px;
+            margin-bottom: 30px; 
+            font-size: 24px;
+            border-radius: 30px;
+            font-weight: 400;
+        }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header header-palestra">
+
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <nav class="menu">
+            <div class="logo"><img src="img/logo.png" alt="logo"></div>
+            <div class="nav-links">
+              <a href="#">Inicio</a>
+              <a href="#">Quem Somos</a>
+              <a href="#">Etapas</a>
+              <a href="#">Participantes</a>
+              <a href="#">Regulamentos</a>
+              <a href="#">Contactos</a>
+              <a class="btn-inscrever">Inscrever-se</a>
+            </div>
+          </nav>
+
+          <div class="logo-mobile">
+            <img src="img/logo.png" alt="logo">
+          </div>
+
+          <nav class="mobile-menu">
+            <div class="mobile-nav-links">
+              <a href="#">Inicio</a>
+              <a href="#">Quem Somos</a>
+              <a href="#">Etapas</a>
+              <a href="#">Participantes</a>
+              <a href="#">Regulamentos</a>
+              <a href="#">Contactos</a>
+              <a class="btn-inscrever">Inscrever-se</a>
+            </div>
+          </nav>
+
+
+        <div class="hero-palestrantes container">
+            <div class="hero">
+                <div class="hero-text palestra-hero">
+                  <h1>PALESTRANTES</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   
+<section class="mentores palestrantes-mentores">
+    <div class="container">
+        <div class="mentores-container">
+            <div class="card-mentores">
+                <img src="img/mentores/Daniel-Kandandji-PB.png" alt="">
+                <div class="card-mentores-texto" data-modal-target="modal-1">
+                    <h4>Daniel Kandandji</h4>
+                </div>
+            </div>
+            <div class="card-mentores">
+                <!-- Image 2 content goes here -->
+                <img src="img/mentores/Heraclidio-Costa.png" alt="">
+                <div class="card-mentores-texto" data-modal-target="modal-2">
+                    <h4>Heraclidio Costa</h4>
+                </div>
+            </div>
+            <div class="card-mentores">
+                <!-- Image 3 content goes here -->
+                <img src="img/mentores/Isac-Matana.png" alt="">
+                <div class="card-mentores-texto" data-modal-target="modal-3">
+                    <h4>Isaac Matana</h4>
+                </div>
+            </div>
+            <div class="card-mentores">
+                <!-- Image 4 content goes here -->
+                <img src="img/mentores/Janaina-Carneiro-PB.png" data-ix="" alt="">
+                <div class="card-mentores-texto" data-modal-target="modal-4">
+                    <h4>Janaina Carneiro</h4>
+                </div>
+            </div>
+
+
+            <!--   -->
+
+            <div class="card-mentores">
+                <img src="img/mentores/Daniel-Kandandji-PB.png" alt="">
+                <div class="card-mentores-texto" data-modal-target="modal-1">
+                    <h4>Daniel Kandandji</h4>
+                </div>
+            </div>
+            <div class="card-mentores">
+                <!-- Image 2 content goes here -->
+                <img src="img/mentores/Heraclidio-Costa.png" alt="">
+                <div class="card-mentores-texto" data-modal-target="modal-2">
+                    <h4>Heraclidio Costa</h4>
+                </div>
+            </div>
+            <div class="card-mentores">
+                <!-- Image 3 content goes here -->
+                <img src="img/mentores/Isac-Matana.png" alt="">
+                <div class="card-mentores-texto" data-modal-target="modal-3">
+                    <h4>Isaac Matana</h4>
+                </div>
+            </div>
+            <div class="card-mentores">
+                <!-- Image 4 content goes here -->
+                <img src="img/mentores/Janaina-Carneiro-PB.png" data-ix="" alt="">
+                <div class="card-mentores-texto" data-modal-target="modal-4">
+                    <h4>Janaina Carneiro</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--   -->
+
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Daniel Kandandji</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ÁLVARO DE ALMEIDA</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ÁLVARO DE ALMEIDA</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <div id="modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ÁLVARO DE ALMEIDA</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- ... (remaining code) ... -->
+
+<section class="white">
+
+</section>
+
+    <footer>
+       <!-- <div class="footer-box"> -->
+        <!---->
+
+
+        <div class="footer-column">
+            <img src="img/logo.png" alt="Logo">
+            <p>Contact Info:</p>
+            <p>Email: example@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-column">
+
+            <nav>
+                <ul>
+                    <li><a href="#" class="btn">Inicio</a></li>
+                    <li> <a href="#" class="btn">Quem Somos</a></li>
+                    <li><a href="#" class="btn">Etapas</a></li>
+                    <li><a href="#" class="btn">Participantes</a></li>
+                    <li> <a href="#" class="btn">Regulamentos</a></li>
+                    <li><a href="#" class="btn">Contactos</a> </li>
+                    <li><a class="btn-inscrever">Inscrever-se</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-column">
+            <h4>Localização</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-123.456789!3d12.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAwJzM1LjAiTiAxMjPCsDIzJzA4LjEiRQ!5e0!3m2!1sen!2sus!4v1627123456789!5m2!1sen!2sus"
+                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p>Endereço: 123 Main Street, City, Country</p>
+        </div>
+
+        
+        <!--  </div>  -->
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+    <!-- Adicione o link para o jQuery antes do script abaixo -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+     <script>
+     $(document).ready(function() {
+     // Quando o ícone do hamburguer for clicado
+     $(".hamburger-menu").click(function() {
+         // Adiciona a classe 'open' ao menu móvel
+         $(".mobile-menu").toggleClass("open");
+     });
+ 
+     // Quando um link do menu móvel for clicado (opcional)
+     $(".mobile-menu a").click(function() {
+         // Fecha o menu móvel
+         $(".mobile-menu").removeClass("open");
+     });
+     });
+     </script>
+</body>
+
+</html>

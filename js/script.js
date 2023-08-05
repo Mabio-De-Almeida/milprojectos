@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /*
   document.addEventListener("DOMContentLoaded", function () {
     const hamburgerMenu = document.querySelector(".hamburger-menu");
     const navLinks = document.querySelector(".nav-links");
@@ -75,4 +76,4 @@ document.addEventListener("DOMContentLoaded", function () {
       navLinks.classList.toggle("open");
     });
   });
-  
+  */

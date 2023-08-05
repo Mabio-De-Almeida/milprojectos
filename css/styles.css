@@ -76,8 +76,7 @@
   
   .header {
     position: relative;
-    height: 100vh;
-    width: 100%;
+    height: fit-content;
     background-image: url(../img/banner.jpg) ;
     background-size: cover;
     background-position: center;
@@ -93,13 +92,13 @@
     align-items:center;
     align-items: flex-end;
     flex-grow: 1; /* Permite que o menu ocupe todo o espaço disponível */
-    margin-left: 150px;
+    margin-left: 100px;
 }
   
 .logo {
   position: absolute;
   top: -70px;
-  left: 0;
+  left: -2%;
 }
 
 .logo img {
@@ -152,41 +151,44 @@
 
   /*HERO*/
   .hero {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
-    align-items: center;
-    justify-content:space-around;
+    flex-wrap: wrap;
+    justify-content:space-between;
     color: #fff;
     padding: 50px;
   }
   
   .hero-text {
-    width: 65%;
-    flex: 1;
+    width: 60%;
+    text-align: justify;
   }
   
   .hero-text h1 {
-    
+
     line-height: 1.15em;
     font-weight: 700;
+
   }
   .hero-img{
     width: 35%;
+    text-align: center;
   }
   .hero-img img {
-    height: 100%;
+    max-width: 100%;
   }
 
   /**/
   .detalhe{
     position: absolute;
     left: 10%;
+    bottom: -22px;
     z-index: 1;
   }
 
 
 .container{
-  max-width: 1200px;
+  max-width: 95%;
   margin: 0 auto; /* Centraliza o div horizontalmente com margens em ambos os lados */
 
 }
@@ -223,6 +225,7 @@
   margin: 0;
   padding: 0;
   position: relative;
+  padding-bottom: 200px;
 
 }
 .card-container{
@@ -292,34 +295,28 @@
   left: -10px;
   border: 2px solid var(--cor-branco);
 }
+
 .yellow{
+  position: absolute;
   bottom: 0;
   right: 0;
-  width: 49.3%;
-  padding: 30px;
-  position: absolute;
+  padding: 180px 35px 35px 10px;
   background: var(--cor-amarelo);
-  z-index: -1;
-  display: flex;
-  align-items:flex-end;
-  display: flex;
   text-align: left;
+  z-index: -1;
+  width: 48.0%;
 }
+
 .yellow h3{
-  padding-top: 70px;
+  padding-top: 80px;
   margin-top: 20px;
   font-weight: 400;
   text-align: left;
 }
 
 /*ABOUT*/
-
-.about-section{
- 
-}
 .about{
     display: flex;
-    max-width: 1440px;
 }
 
 .about-img{
@@ -339,7 +336,7 @@
 }
 .about-text{
 margin:0 auto;
-width: 400px;
+max-width: 400px;
 text-align: justify;
 padding-bottom: 50px;
 }
@@ -354,16 +351,15 @@ padding-bottom: 50px;
   padding: 100px 100px 100px 0px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 /*flex: 1;*/
 
 .news-txt {
-  
   position: relative;
-  padding: 0 auto;
+  margin: 0 auto;
   background-color: var(--cor-amarelo);
-  padding: 20px 200px 20px 100px;
+  padding: 20px 200px 20px 150px;
   max-width: 500px;
 }
 .news-txt::after{
@@ -574,17 +570,21 @@ h3{
 }
 
 /**/
+.mentores{
+  width: 100%;
+}
 .mentores-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   /* Optional: Set a fixed height for the cards */
   /* height: 200px; */
 }
 
-.mentores h1{
+.sub{
   position: relative;
 }
-.mentores h1::after{
+.sub::after{
   content: "";
     position: absolute;
     top: 50%; /* Adjust the distance of the underline from the text */
@@ -596,18 +596,19 @@ h3{
     z-index: -1;
 
 }
+
 .card-mentores {
-  flex: 1;
+
+  display: flex;
   /* Set width as 25% (1/4) of the card-container width */
-  width: calc(25% - 10px); /* Subtracting margin to avoid potential wrapping due to rounding */
-  height: 400px;
+  flex-basis: calc(24% - 1px); /* Subtracting margin to avoid potential wrapping due to rounding */
+  max-height: 450px;
   /* Optional: Add margin between cards */
   margin: 5px;
   /* Optional: Add styling for the cards */
-  background-color: #000000;
+  background-color: #fff;
   border: 1px solid var(--cor-amarelo);
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 8px;;
   position: relative;
 }
 .card-mentores img {
@@ -616,28 +617,30 @@ h3{
   border-radius: 8px;
   margin: 0;
   padding: 0;
-}
-
-.card-mentores-texto{
-  width: 270px;
-  text-align: center;
-  font-size: 18px;
-  padding: 5px;
-  position: absolute;
-  bottom: 10px;
-  left: 0px;
-  color: #fff;
-  background-color: var(--cor-preto);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-/*Parceiros*/
-.parceiros h1{
   position: relative;
 }
 
-.parceiros h1::after{
+.card-mentores-texto{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #fff;
+  background-color: var(--cor-preto);
+  opacity: 0.7;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/*Parceiros*/
+.sub{
+  position: relative;
+}
+
+.sub::after{
     content: "";
     position: absolute;
     top: 50%; /* Adjust the distance of the underline from the text */
@@ -661,18 +664,15 @@ h3{
   border-radius: 8px;
 }
 
-/**/
-
-.footer-box {
-  /*max-width: 1200px;
-  margin: 0 auto; Center the box horizontally */
-
+.flex-item.hc img{
+    max-width: 220px;
 }
+/* footer */
 
 footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: var(--cor-preto);
   padding: 20px;
 }
@@ -688,6 +688,7 @@ nav ul {
 }
 
 nav li {
+  text-align: center;
   margin-bottom: 20px; /* Add custom margin between navigation items */
 }
 
@@ -741,142 +742,329 @@ nav li a:hover {
   cursor: pointer;
 }
 
-/**/
-/* ... (previous styles) ... */
+/* ... other styles ... */
 
+
+
+
+
+
+/* Estilos para o menu móvel */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #333; /* Cor de fundo do menu móvel */
+  color: #fff; /* Cor do texto do menu móvel */
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: -110%; /* Inicialmente oculto, escondido fora da tela à esquerda */
+  width: 50vw;
+  height: 100vh;
+  transition: left 0.3s ease; /* Adiciona uma transição suave para a animação */
+  z-index: 3; /* Coloca o menu móvel acima do conteúdo da página */
+}
+
+.mobile-menu.open {
+  left:0; /* Exibe o menu móvel quando a classe 'open' é adicionada */
+}
+
+
+.mobile-menu a {
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Estilos para o ícone do hamburguer */
 .hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2; /* Coloca o ícone acima do menu móvel */
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff; /* Cor do ícone do hamburguer */
+  background: var(--cor-rosa);
+
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  
+}
+
+.logo-mobile {
   display: none;
 }
 
-.hamburger-icon {
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
-  transition: transform 0.3s;
-}
+/* Media Query for small screens (adjust the breakpoint as needed) */
 
-.hamburger-menu.open .hamburger-icon {
-  transform: rotate(45deg);
-}
 
-.hamburger-menu.open .hamburger-icon:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-menu.open .hamburger-icon:nth-child(3) {
-  transform: rotate(-45deg);
-}
+/* ... other styles ... */
 
 /* Mobile Menu Styles */
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+/*  Sobre*/
+.sobre{
+  margin: 0 auto;
+}
+.sobre h1{
+  
+  text-align: left;
 }
 
-/* For devices width a screen width between 961 and 1300 px*/
-@media screen and (min-width: 1080px) and (max-width:1999px){
-  body{
+.sobre p{
+  font-size: 28px;
+  max-width: 1200px;
+}
+
+/* Default styles for all screen sizes (Mobile First) */
+@media (max-width: 360px){
+
+h1{
+  font-size: 28px;
+}
+
+}
+
+/* Styles for small screens (up to 768px) */
+@media (max-width: 768px) {
+  header, section, footer{
+    max-width:768px;
+  }
+  /* Adjust font sizes, padding, and margins for smaller screens */
+  body {
+    max-width: 768px;
     overflow-x: hidden;
   }
-    .logo{
-      position: absolute;
-      left: -12%;
-    }    
 
-    h1{
-      font-size: 70px;
-    }
-
-    .hero-img{
-      height: 400px;
-    }
-
-    .detalhe{
-      position: absolute;
-      bottom: -25px;
-    }
-
-    .container{
-      width: 90%;
-    }
-
-    /* flip card*/
-    
-      .title:before {
-        left: 23%;
-      }
-
-      .title:after {
-        right: 23%;
-      }
-
-      /*yellow*/
-      .yellow{
-        padding: 31px;
-      }
-      /*news*/
-      .news-txt{
-        padding: 20px 50px 20px 25px;
-      }
-
-
-    }
-
-/* Styles for devices with a screen width between 1200px and 1300px */
-@media screen and (min-width: 1200px) and (max-width: 1300px) {
-  /* Add your styles here */
-  body {
-    font-size: 16px; /* Example style */
+  .header{
+    height: fit-content;
   }
 
-  .container {
-    width: 90%; /* Example style */
+  .container{
+    max-width: 768px;
+    margin: 0 auto;
   }
 
-  .logo{
-    position: absolute;
-    left: -10%;
-  }
-}
-@media screen and (max-width: 960px) {
-
-  .menu{
-    position: relative;
+  /* Example: Stack the menu links vertically */
+  .menu {
+    display: none !important;
   }
 
   .hamburger-menu {
     display: block;
-    cursor: pointer;
+  }
+  
+  .mobile-menu {
+    padding-top: 150px;
+    display: flex; /* Exibe o menu móvel em telas pequenas */
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #007bff;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links a {
-    padding: 15px;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
+  .logo-mobile{
     display: block;
+    position: absolute;
+    top: 0;
   }
 
-  .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  .logo-mobile img{
+    max-width: 150px;
+    height: 100px;
   }
 
-  .hamburger-menu.open .nav-links {
-    display: flex;
+  /* logo-mobile*/
+  .hero{
+    flex-direction: column-reverse;
   }
+  .hero-text{
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text h1{
+    font-size: 32px;
+    text-align: center;
+  }
+  .hero-img{
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+
+  .hero-img img{
+    max-width: 100%;
+  }
+  
+  .detalhe{
+    position: absolute;
+    bottom: -25px;
+  }
+  .etapas{
+    padding-bottom: 10px;
+  }
+  .title:before{
+  left: 18%;
+  top: 50%;
+  width: 50px;
+  }
+
+  .title:after{
+  right: 18%;
+  top: 50%;
+  width: 50px;
+  }
+
+  .yellow{
+    position: relative;
+    width: auto;
+    padding: 20px 20px 60px;
+    
+  }
+
+  .yellow h3 {
+    text-align: center;
+    margin: 0 auto;  
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .about-img{
+    display: none;
+  }
+  .about-text{
+    margin:0 auto;
+    width: 300px;
+    text-align: left ;
+    padding-bottom: 50px;
+    }
+  
+  .news{
+    flex-wrap: wrap;
+    max-width:768px;
+    padding: 20px;
+  }
+
+  .news-txt{
+    margin-bottom: 100px;
+    padding: 20px 50px 0px 5px !important;
+  }
+  /*flex: 1;*/
+.slider-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+
+.btn-prev, .btn-next{
+  display: none;
+}
+
+.news .container {
+  border-radius: 10px;
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+  .card {
+    flex: 0 0 300px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: var(--cor-preto);
+    margin-right: 20px;
+    height: 400px;
+  }
+  
+.card-header {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  margin-bottom: 10px;
+}
+
+.card-header img {
+  margin-left: 10px;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.card-header h2 {
+  font-size: 30px;
+  font-weight: 700;
+  transform: uppercase;
+  line-height: 0.75;
+  color: var(--cor-branco);
+  margin-bottom: 10px;
+}
+.card-header h4{
+  margin-top: 0;
+  color: var(--cor-branco);
+  font-weight: 400;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: var(--cor-branco);
+  margin: 0;
+  width: 95%;
+}
+
+
+.btn-next {
+  right: -50px;
+}
+
+.programacao{
+  max-width: 768px;
+}
+
+.programacao h1{
+  font-size: 28px;
+}
+
+.btn-prev-prog{
+  left: 10px;
+}
+
+.btn-next-prog{
+  right: 10px;
+}
+
+
+/**/
+.mentores{
+  max-width: 768px;
+}
+.sub{
+  margin-left: 30px;
+  font-size: 42px;
+  text-align: left;
+}
+.sub::after {
+  width: 80px;
+  left: 25%;
+  height: 2px;
+  padding: 10px;
+  z-index: -1;
+}
+
+.mentores-container{
+  display: flex;
+  justify-content: center;
+}
+.card-mentores{
+  flex-basis: 300px;
+  background-color: #fff;
+}
+  
+
 }

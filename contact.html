@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MilProjectos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&family=Poppins:wght@400;700;800&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <style>
+       
+       header{
+        
+       }
+        .hero{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 200px;
+        }
+        .hero-text{
+            width: 100%;
+            text-align: center;
+        }
+        
+       
+       .contactos{
+        height: auto;
+       }
+
+       .container-contactos{
+        width: 90%;
+        margin: 0 auto ;
+        display: flex;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        color: #fff;
+        padding: 100px;
+        }
+
+        
+        .contactos-form{
+            width: 50%;
+        }
+        .contactos-form h1{
+            color: black;
+            padding: 0;
+            margin:0;
+
+        }
+        .form-row{
+            width: 100%;
+            display: flex;
+        }
+        .form-group{
+            color: black;
+            display: flex;
+            flex-basis: calc(50% - 2px);
+            flex-direction: column;
+            
+            
+        }
+             
+        input, textarea{
+            outline: none;
+            border: none;
+        }
+        .form-control{
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #F5F5F5;
+            font-size: 24px;    
+        }
+
+        .ml-3{
+            margin-left: 20px;
+        }
+        .btn-enviar{
+        background-color: #b93689;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .contactos-img{
+            width: 50%;
+            margin: auto 0;
+        }
+
+        .contactos-img img{
+            max-width: 100%;
+        }
+
+        li i{
+            color: #b93689;
+        }
+
+        @media (max-width: 768px){
+        
+        .hero{
+        padding-bottom: 50px;
+        }
+
+        .contactos-form h1{
+            text-align: justify;
+
+        }
+        .container-contactos{
+        width: 98%;
+        padding: 50px 0 50px 0;
+        
+    
+        }
+        .contactos-form{
+            width: 100%;
+        }
+        .form-row{
+            width: 100%;
+            display: block;
+        }
+        .form-group{
+            flex-basis: 100%;
+            flex-direction: column;   
+        }
+        .form-control{
+            font-size: 18px;    
+        }
+
+        .contactos-img{
+          display: none;
+        }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <nav class="menu">
+            <div class="logo"><img src="img/logo.png" alt="logo"></div>
+            <div class="nav-links">
+              <a href="#">Inicio</a>
+              <a href="#">Quem Somos</a>
+              <a href="#">Etapas</a>
+              <a href="#">Participantes</a>
+              <a href="#">Regulamentos</a>
+              <a href="#">Contactos</a>
+              <a class="btn-inscrever">Inscrever-se</a>
+            </div>
+          </nav>
+
+          <div class="logo-mobile">
+            <img src="img/logo.png" alt="logo">
+          </div>
+
+          <nav class="mobile-menu">
+            <div class="mobile-nav-links">
+              <a href="#">Inicio</a>
+              <a href="#">Quem Somos</a>
+              <a href="#">Etapas</a>
+              <a href="#">Participantes</a>
+              <a href="#">Regulamentos</a>
+              <a href="#">Contactos</a>
+              <a class="btn-inscrever">Inscrever-se</a>
+            </div>
+          </nav>
+
+
+        <div class="hero-rules container">
+            <div class="hero">
+                <div class="hero-text">
+                  <h1>DEIXE A SUA MENSAGEM</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <section class="contactos">
+    <div class="container-contactos">
+
+        <div class="contactos-form">
+            <form action="" method="post">
+
+                <h1> <span class="rosa">Fale Connosco</span></h1>
+                
+                <div class="form-row">
+                <div class="form-group">
+                   
+                    <input type="text" class="form-control" id="nome" name="nome"  placeholder="Nome">
+                  </div>
+
+                  <div class="form-group">
+                    
+                    <input type="text" class="form-control" id="sobrenome" name="sobrenome"  placeholder="Sobrenome">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                   
+                    <input type="text" class="form-control" id="telefone" name="telefone"  placeholder="telefone">
+                  </div>
+
+                  <div class="form-group">
+                 
+                    <input type="email" class="form-control" id="email" name="email"  placeholder="email">
+                  </div>
+
+                </div>
+
+                  <div class="form-group">
+                    
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Escreva a sua mensagem..."></textarea>
+                  </div>
+
+                <div class="d-flex flex-row-reverse">
+                  <button type="submit" name="enviar" id="enviar" class="btn btn-enviar ml-3">Enviar</button>  
+            </form>
+        </div>
+        </div>
+        <div class="contactos-img">
+            <img src="img/contactos.png" alt="">
+
+    </div>    
+   </section>
+
+
+    <footer>
+       <!-- <div class="footer-box"> -->
+        <!---->
+
+
+        <div class="footer-column">
+            <img src="img/logo.png" alt="Logo">
+            <p>Contact Info:</p>
+            <p>Email: example@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+
+        <div class="footer-column">
+
+            <nav>
+                <ul>
+                    <li><a href="#" class="btn">Inicio</a></li>
+                    <li> <a href="#" class="btn">Quem Somos</a></li>
+                    <li><a href="#" class="btn">Etapas</a></li>
+                    <li><a href="#" class="btn">Participantes</a></li>
+                    <li> <a href="#" class="btn">Regulamentos</a></li>
+                    <li><a href="#" class="btn">Contactos</a> </li>
+                    <li><a class="btn-inscrever">Inscrever-se</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-column">
+            <h4>Localização</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-123.456789!3d12.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAwJzM1LjAiTiAxMjPCsDIzJzA4LjEiRQ!5e0!3m2!1sen!2sus!4v1627123456789!5m2!1sen!2sus"
+                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p>Endereço: 123 Main Street, City, Country</p>
+        </div>
+
+        
+        <!--  </div>  -->
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&family=Poppins:wght@400;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&family=Poppins:wght@400;700;800&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 
 <body>
     <header class="header">
 
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
         <nav class="menu">
             <div class="logo"><img src="img/logo.png" alt="logo"></div>
             <div class="nav-links">
@@ -28,8 +33,22 @@
               <a href="#">Contactos</a>
               <a class="btn-inscrever">Inscrever-se</a>
             </div>
-            <div class="hamburger-menu">
-              <div class="hamburger-icon"></div>
+          </nav>
+
+          
+
+          <nav class="mobile-menu">
+            <div class="logo-mobile">
+                <img src="img/logo.png" alt="logo">
+              </div>
+            <div class="mobile-nav-links">
+              <a href="#">Inicio</a>
+              <a href="#">Quem Somos</a>
+              <a href="#">Etapas</a>
+              <a href="#">Participantes</a>
+              <a href="#">Regulamentos</a>
+              <a href="#">Contactos</a>
+              <a class="btn-inscrever">Inscrever-se</a>
             </div>
           </nav>
 
@@ -249,34 +268,34 @@
 
 <section class="mentores">
     <div class="container">
-        <h1>Mentores</h1>
+        <h1 class="sub">Mentores</h1>
 
         <div class="mentores-container">
             <div class="card-mentores">
-                <img src="img/profile-pic.png" alt="">
+                <img src="img/mentores/Daniel-Kandandji-PB.png" alt="">
                 <div class="card-mentores-texto" data-modal-target="modal-1">
-                    <h4>ÁLVARO DE ALMEIDA</h4>
+                    <h4>Daniel Kandandji</h4>
                 </div>
             </div>
             <div class="card-mentores">
                 <!-- Image 2 content goes here -->
-                <img src="img/profile-pic.png" alt="">
+                <img src="img/mentores/Heraclidio-Costa.png" alt="">
                 <div class="card-mentores-texto" data-modal-target="modal-2">
-                    <h4>ÁLVARO DE ALMEIDA</h4>
+                    <h4>Heraclidio Costa</h4>
                 </div>
             </div>
             <div class="card-mentores">
                 <!-- Image 3 content goes here -->
-                <img src="img/profile-pic.png" alt="">
+                <img src="img/mentores/Isac-Matana.png" alt="">
                 <div class="card-mentores-texto" data-modal-target="modal-3">
-                    <h4>ÁLVARO DE ALMEIDA</h4>
+                    <h4>Isaac Matana</h4>
                 </div>
             </div>
             <div class="card-mentores">
                 <!-- Image 4 content goes here -->
-                <img src="img/profile-pic.png" data-ix="" alt="">
+                <img src="img/mentores/Janaina-Carneiro-PB.png" data-ix="" alt="">
                 <div class="card-mentores-texto" data-modal-target="modal-4">
-                    <h4>ÁLVARO DE ALMEIDA</h4>
+                    <h4>Janaina Carneiro</h4>
                 </div>
             </div>
         </div>
@@ -285,7 +304,7 @@
     <div id="modal-1" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>ÁLVARO DE ALMEIDA</h2>
+            <h2>Daniel Kandandji</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
     </div>
@@ -320,16 +339,15 @@
 
     <section class="parceiros">
         <div class="container">
-            <h1>Parceiros</h1>
+            <h1 class="sub">Parceiros</h1>
 
             <div class="flex-container">
-                <div class="flex-item"><img src="img/logo.png"></div>
-                <div class="flex-item"><img src="img/logo.png"></div>
-                <div class="flex-item"><img src="img/logo.png"></div>
-                <div class="flex-item"><img src="img/logo.png"></div>
-                <div class="flex-item"><img src="img/logo.png"></div>
-                <div class="flex-item"><img src="img/logo.png"></div>
-
+                <div class="flex-item hc"><img src="img/parceiros/logo-HC.png"></div>
+                <div class="flex-item"><img src="img/parceiros/logo_mais_estagio.png"></div>
+                <div class="flex-item"><img src="img/parceiros/logo_marketing_360.png"></div>
+                <div class="flex-item"><img src="img/parceiros/logo_stanford.png"></div>
+                <div class="flex-item hc"><img src="img/parceiros/logo-HC.png"></div>
+                <div class="flex-item"><img src="img/parceiros/logo_mais_estagio.png"></div>
             </div>
 
         </div>
@@ -338,7 +356,7 @@
 
 
     <footer>
-        <div class="footer-box">
+       <!-- <div class="footer-box"> -->
         <!---->
 
 
@@ -371,15 +389,35 @@
                 width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             <p>Endereço: 123 Main Street, City, Country</p>
         </div>
-        <!-- -->
 
-        </div>
+        
+        <!--  </div>  -->
 
     </footer>
 
 
 
     <script src="js/script.js"></script>
+   <!-- Adicione o link para o jQuery antes do script abaixo -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+    // Quando o ícone do hamburguer for clicado
+    $(".hamburger-menu").click(function() {
+        // Adiciona a classe 'open' ao menu móvel
+        $(".mobile-menu").toggleClass("open");
+    });
+
+    // Quando um link do menu móvel for clicado (opcional)
+    $(".mobile-menu a").click(function() {
+        // Fecha o menu móvel
+        $(".mobile-menu").removeClass("open");
+    });
+    });
+    </script>
+
+      
 </body>
 
 </html>
