@@ -36,3 +36,43 @@ slider.addEventListener('mouseout', startAutoSlide);
 
 startAutoSlide();
 showCard(cardIndex);
+
+/* */
+document.addEventListener("DOMContentLoaded", function () {
+    const modalContainers = document.querySelectorAll(".modal");
+    const cardTextElements = document.querySelectorAll(".card-mentores-texto");
+  
+    cardTextElements.forEach((cardTextElement) => {
+      cardTextElement.addEventListener("click", function () {
+        const modalId = cardTextElement.getAttribute("data-modal-target");
+        const modal = document.getElementById(modalId);
+  
+        if (modal) {
+          modal.style.display = "block";
+          setTimeout(() => {
+            modal.classList.add("open");
+          }, 10); // Slight delay to allow the display to take effect before sliding
+        }
+      });
+    });
+  
+    modalContainers.forEach((modalContainer) => {
+      const closeBtn = modalContainer.querySelector(".close");
+      closeBtn.addEventListener("click", function () {
+        modalContainer.classList.remove("open");
+        setTimeout(() => {
+          modalContainer.style.display = "none";
+        }, 500); // Transition duration is 0.5s (500ms)
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const navLinks = document.querySelector(".nav-links");
+  
+    hamburgerMenu.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+    });
+  });
+  
