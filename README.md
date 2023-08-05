@@ -507,7 +507,5 @@ h3{
 
 }
 
-@media (min-width:1600px){
 
-}
   
